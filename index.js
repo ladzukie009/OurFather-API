@@ -8,6 +8,8 @@ import { connectDB } from "./config/database.js";
 import userRoutes from "./routes/userRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import planRoutes from "./routes/planRoutes.js";
+import reservationRoutes from "./routes/reservationRoutes.js";
+import statusRoutes from "./routes/statusRoutes.js";
 
 // initialize app
 const app = express();
@@ -39,3 +41,5 @@ app.get("/api/test", (req, res) => {
 app.use("/api/user", userRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/plan", planRoutes);
+app.use("/api/reservation", reservationRoutes);
+app.use("/api/status", statusRoutes);
